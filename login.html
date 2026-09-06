@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMatch - Sign In</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary fs-3" href="index.html">
+        <i class="bi bi-journal-bookmark-fill me-2"></i>StudyMatch
+      </a>
+    </div>
+  </nav>
+
+  <!-- FORMULARIO LOGIN -->
+  <main class="container my-auto py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-5">
+        <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
+          
+          <div class="text-center mb-4">
+            <h2 class="fw-bold text-dark">Welcome Back</h2>
+            <p class="text-muted small">Sign in to access your saved study profiles and resources</p>
+          </div>
+
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="email" class="form-label fw-semibold text-dark">Email Address</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0"><i class="bi bi-envelope text-muted"></i></span>
+                <input type="email" class="form-control bg-light border-start-0" id="email" placeholder="name@example.com" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <label for="password" class="form-label fw-semibold text-dark">Password</label>
+                <a href="#" class="small text-primary text-decoration-none">Forgot?</a>
+              </div>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock text-muted"></i></span>
+                <input type="password" class="form-control bg-light border-start-0" id="password" placeholder="••••••••" required>
+              </div>
+            </div>
+
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="rememberMe">
+              <label class="form-check-label text-secondary small" for="rememberMe">Remember me</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill fw-bold shadow-sm mb-3">Sign In</button>
+          </form>
+
+          <div class="text-center border-top pt-3">
+            <p class="text-secondary small mb-0">Don't have an account? <a href="signup.html" class="text-primary fw-bold text-decoration-none">Sign Up</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-top py-4 mt-auto">
+    <div class="container text-center text-muted">
+      <p class="mb-1">StudyMatch &copy; 2026 — Aligned with <strong>SDG 4: Quality Education</strong></p>
+      <small>Developed by Melisa Arias, Marianna Jimenez, and Ana Paola Orellana</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

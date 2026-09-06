@@ -1,0 +1,169 @@
+:root {
+  --color-dark-navy: #131b3e;
+  --color-ocean-blue: #2f6fb3;
+  --color-sky-blue: #6a9ee8;
+  --color-soft-blue: #9ebff7;
+  --color-lavender: #8d8ff5;
+  
+  --bs-primary: var(--color-ocean-blue);
+  --bs-primary-rgb: 47, 111, 179;
+  --bs-link-color: var(--color-ocean-blue);
+  --bs-link-hover-color: var(--color-dark-navy);
+}
+
+body.bg-light {
+  background-color: var(--color-dark-navy) !important;
+}
+
+.page-header {
+  background-color: var(--color-ocean-blue) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.page-header h1 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.header-subtitle,
+.section-subtitle {
+  color: #e2edff !important;
+  font-weight: 400;
+}
+
+.navbar-brand,
+.navbar-brand i,
+.navbar-brand.text-primary {
+  color: var(--color-dark-navy) !important;
+}
+
+.nav-link.active {
+  color: var(--color-ocean-blue) !important;
+}
+
+.hero-section {
+  background: url('https://www.psaproducts.com.au/wp-content/uploads/2016/08/Hero-Banner-Placeholder-Light-2500x1172-1.png') center/cover no-repeat;
+  min-height: 500px;
+  width: 100%;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(4px);
+}
+
+.card,
+main .card.bg-white {
+  background-color: #f0f5ff !important;
+  border: 1px solid rgba(106, 158, 232, 0.2) !important;
+}
+
+.card .card-title,
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card .text-dark,
+.card label,
+body.bg-light .card h2.text-dark {
+  color: #131b3e !important;
+}
+
+.card .card-text,
+.card p,
+.card .text-secondary,
+.card .text-muted,
+body.bg-light .card .text-secondary,
+body.bg-light .card .text-muted,
+body.bg-light .card p.text-muted {
+  color: #3b4d7a !important;
+  font-weight: 500;
+}
+
+.card-sublabel,
+.card-meta {
+  color: #3b4d7a !important;
+  font-weight: 600;
+}
+
+.inner-box {
+  background-color: #ffffff !important;
+  border: 1px solid #d8e4f8;
+}
+
+.inner-box-title {
+  color: #131b3e !important;
+}
+
+.inner-box-list {
+  color: #263359 !important;
+  font-weight: 500;
+}
+
+.card .rounded-circle,
+main .card .rounded-circle,
+main .card .bg-info.bg-opacity-10,
+main .card .bg-primary.bg-opacity-10,
+main .card .bg-success.bg-opacity-10,
+main .card .bg-warning.bg-opacity-10,
+main .card .bg-danger.bg-opacity-10 {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.btn-primary {
+  background-color: var(--color-ocean-blue) !important;
+  border-color: var(--color-ocean-blue) !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus {
+  background-color: var(--color-dark-navy) !important;
+  border-color: var(--color-dark-navy) !important;
+}
+
+.btn-outline-primary {
+  color: var(--color-ocean-blue) !important;
+  border-color: var(--color-ocean-blue) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-ocean-blue) !important;
+  border-color: var(--color-ocean-blue) !important;
+  color: #ffffff !important;
+}
+
+.text-info {
+  color: var(--color-ocean-blue) !important;
+}
+
+/* Footer */
+footer,
+body.bg-light footer {
+  background-color: var(--color-dark-navy) !important;
+  border-top-color: rgba(255, 255, 255, 0.15) !important;
+  color: var(--color-soft-blue) !important;
+}
+
+footer .text-muted,
+footer p,
+footer small {
+  color: var(--color-soft-blue) !important;
+}
+
+footer strong {
+  color: #ffffff !important;
+}
+
+body.bg-light > main > .text-center > h2.text-dark,
+body.bg-light > .container > .text-center > h2.text-dark,
+body.bg-light > main > section > .container > .text-center > h2 {
+  color: #ffffff !important;
+}
+
+body.bg-light > main > .text-center > p.text-muted,
+body.bg-light > .container > .text-center > p.text-muted,
+body.bg-light > main > section > .container > .text-center > p.text-muted {
+  color: #e2edff !important;
+  font-weight: 400;
+}

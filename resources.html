@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMatch - Educational Resources</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- 1. NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary fs-3" href="index.html">
+        <i class="bi bi-journal-bookmark-fill me-2"></i>StudyMatch
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav fs-5 align-items-center gap-2">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="test.html">Take the Test</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profiles.html">Study Profiles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" href="resources.html">Resources</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-outline-primary rounded-pill px-4 fw-bold" href="login.html">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-5 page-header text-center text-white">
+    <div class="container my-2">
+      <h1 class="display-4 fw-bold mb-3 text-white">Study Resource Center</h1>
+      <p class="fs-5 header-subtitle col-lg-8 mx-auto">
+        Explore video tutorials, study guides, and interactive tools designed to boost your academic performance.
+      </p>
+    </div>
+  </header>
+
+  <!-- 3. MAIN CONTENT -->
+  <main class="container my-5 flex-grow-1">
+    
+    <!-- Search Bar Placeholder for YouTube API -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="input-group input-group-lg shadow-sm rounded-pill overflow-hidden">
+          <span class="input-group-text bg-white border-0 ps-4">
+            <i class="bi bi-search text-primary"></i>
+          </span>
+          <input type="text" id="searchInput" class="form-control border-0 py-3" placeholder="Search study videos or topics...">
+          <button class="btn btn-primary px-4 fw-bold" type="button" id="searchBtn">
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Title 1: YouTube Videos -->
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <h2 class="fw-bold text-white m-0">
+        <i class="bi bi-youtube text-danger me-2"></i>Recommended Video Guides
+      </h2>
+      <span class="badge bg-danger rounded-pill px-3 py-2">Using Youtube's API</span>
+    </div>
+
+    <!-- 4. VIDEO CARDS GRID (CONTAINER FOR API RESULTS) -->
+    <div class="row g-4 mb-5" id="videoResultsContainer">
+      
+      <!-- Placeholder Card 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-primary bg-opacity-10 text-primary w-auto me-auto mb-2 px-3 py-2 rounded-pill">Active Recall</span>
+            <h5 class="card-title fw-bold">How to Study with Active Recall</h5>
+            <p class="card-text small flex-grow-1">
+              Example video description 1
+            </p>
+            <div class="d-flex align-items-center justify-content-between mt-3 pt-3 border-top">
+              <small class="card-meta"><i class="bi bi-person me-1"></i> Channel name 1</small>
+              <a href="https://www.youtube.com" target="_blank" class="btn btn-sm btn-outline-danger rounded-pill px-3">
+                <i class="bi bi-play-fill"></i> Watch
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder Card 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-success bg-opacity-10 text-success w-auto me-auto mb-2 px-3 py-2 rounded-pill">Pomodoro</span>
+            <h5 class="card-title fw-bold">Pomodoro Technique Masterclass</h5>
+            <p class="card-text small flex-grow-1">
+              Example video description 2
+            </p>
+            <div class="d-flex align-items-center justify-content-between mt-3 pt-3 border-top">
+              <small class="card-meta"><i class="bi bi-person me-1"></i> Channel name 2</small>
+              <a href="https://www.youtube.com" target="_blank" class="btn btn-sm btn-outline-danger rounded-pill px-3">
+                <i class="bi bi-play-fill"></i> Watch
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder Card 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="badge bg-warning bg-opacity-10 text-dark w-auto me-auto mb-2 px-3 py-2 rounded-pill">Organization</span>
+            <h5 class="card-title fw-bold">Visual Note-Taking Strategies</h5>
+            <p class="card-text small flex-grow-1">
+              Example video description 3
+            </p>
+            <div class="d-flex align-items-center justify-content-between mt-3 pt-3 border-top">
+              <small class="card-meta"><i class="bi bi-person me-1"></i> Channel name 3</small>
+              <a href="https://www.youtube.com" target="_blank" class="btn btn-sm btn-outline-danger rounded-pill px-3">
+                <i class="bi bi-play-fill"></i> Watch
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 5. SECTION TITLE 2: DETAILED STUDY METHODOLOGIES -->
+    <div class="pt-4 mb-4 border-top border-secondary">
+      <h2 class="fw-bold text-white mb-2">
+        <i class="bi bi-lightbulb text-warning me-2"></i>In-Depth Study Methodologies
+      </h2>
+      <p class="section-subtitle fs-5">Learn how each technique works and how to apply it effectively in your daily routines.</p>
+    </div>
+
+    <!-- METHODOLOGIES DETAILED CARDS GRID -->
+    <div class="row g-4">
+
+      <!-- Method 1: Active Recall -->
+      <div class="col-12 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-info bg-opacity-10 text-info p-3 rounded-circle me-3">
+              <i class="bi bi-lightning-charge-fill fs-2"></i>
+            </div>
+            <div>
+              <h3 class="fw-bold m-0 fs-4">Active Recall</h3>
+              <span class="card-sublabel small">Best for: Exam preparation & long-term memory</span>
+            </div>
+          </div>
+          <p class="card-text mb-3">
+            Test your memory actively instead of passively reading notes. Building stronger mental pathways improves retention significantly compared to simple re-reading.
+          </p>
+          <div class="inner-box p-3 rounded-3 mb-3">
+            <h6 class="fw-bold mb-2 inner-box-title"><i class="bi bi-check-circle-fill text-success me-2"></i>How to Practice It:</h6>
+            <ul class="inner-box-list small mb-0 ps-3">
+              <li class="mb-1">Close your book after reading a section and write down everything you remember.</li>
+              <li class="mb-1">Create digital or paper flashcards with questions on one side and answers on the other.</li>
+              <li>Teach the concept to a friend or out loud without looking at your notes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Method 2: Pomodoro Technique -->
+      <div class="col-12 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 text-success p-3 rounded-circle me-3">
+              <i class="bi bi-clock-history fs-2"></i>
+            </div>
+            <div>
+              <h3 class="fw-bold m-0 fs-4">Pomodoro Technique</h3>
+              <span class="card-sublabel small">Best for: Productivity, focus & preventing fatigue</span>
+            </div>
+          </div>
+          <p class="card-text mb-3">
+            Break work into focused 25-minute intervals separated by short 5-minute breaks. Perfect for managing mental fatigue and maintaining high concentration levels.
+          </p>
+          <div class="inner-box p-3 rounded-3 mb-3">
+            <h6 class="fw-bold mb-2 inner-box-title"><i class="bi bi-check-circle-fill text-success me-2"></i>How to Practice It:</h6>
+            <ul class="inner-box-list small mb-0 ps-3">
+              <li class="mb-1">Choose a single task and set a timer for 25 minutes.</li>
+              <li class="mb-1">Work with 100% focus until the timer rings, then take a 5-minute break.</li>
+              <li>After completing 4 cycles (Pomodoros), take a longer 15–30 minute break.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Method 3: Spaced Repetition -->
+      <div class="col-12 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-warning bg-opacity-10 text-warning p-3 rounded-circle me-3">
+              <i class="bi bi-calendar-event-fill fs-2"></i>
+            </div>
+            <div>
+              <h3 class="fw-bold m-0 fs-4">Spaced Repetition</h3>
+              <span class="card-sublabel small">Best for: Overcoming the forgetting curve</span>
+            </div>
+          </div>
+          <p class="card-text mb-3">
+            Review information at systematically increasing intervals over time. This fights the natural forgetting curve and seals concepts into long-term memory.
+          </p>
+          <div class="inner-box p-3 rounded-3 mb-3">
+            <h6 class="fw-bold mb-2 inner-box-title"><i class="bi bi-check-circle-fill text-success me-2"></i>How to Practice It:</h6>
+            <ul class="inner-box-list small mb-0 ps-3">
+              <li class="mb-1">Review new information 1 day after learning it.</li>
+              <li class="mb-1">Review it again after 3 days, 1 week, and 1 month.</li>
+              <li>Use tools like Anki or Quizlet to automate interval scheduling.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Method 4: Concept Mapping -->
+      <div class="col-12 col-lg-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-danger bg-opacity-10 text-danger p-3 rounded-circle me-3">
+              <i class="bi bi-diagram-3-fill fs-2"></i>
+            </div>
+            <div>
+              <h3 class="fw-bold m-0 fs-4">Concept Mapping</h3>
+              <span class="card-sublabel small">Best for: Visual learners & complex topics</span>
+            </div>
+          </div>
+          <p class="card-text mb-3">
+            Organize complex ideas visually using charts, branches, and diagrams. Ideal for visual thinkers looking to connect multiple concepts together.
+          </p>
+          <div class="inner-box p-3 rounded-3 mb-3">
+            <h6 class="fw-bold mb-2 inner-box-title"><i class="bi bi-check-circle-fill text-success me-2"></i>How to Practice It:</h6>
+            <ul class="inner-box-list small mb-0 ps-3">
+              <li class="mb-1">Write the central main idea in the middle of a blank page.</li>
+              <li class="mb-1">Draw sub-branches for key subtopics and supporting details.</li>
+              <li>Use colors, arrows, and short keywords to illustrate connections.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- 6. FOOTER -->
+  <footer class="bg-white border-top py-4 mt-auto">
+    <div class="container text-center text-muted">
+      <p class="mb-1">StudyMatch &copy; 2026 — Aligned with <strong>SDG 4: Quality Education</strong></p>
+      <small>Developed by Melisa Arias, Marianna Jimenez, and Ana Paola Orellana</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
