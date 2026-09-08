@@ -3,30 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyMatch_Base</title>
-    
-    <!-- Link to external CSS stylesheet -->
+    <title>StudyMatch - Find Your Study Method</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Favicon link -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
-<body>
 
-    
-    <header>
-        <h1>Welcome to StudyMatch</h1>
+//top menu present in all pages
+<body class="bg-light d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="index.html"><i class="bi bi-journal-bookmark-fill me-2"></i>StudyMatch</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fs-5 align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-semibold" href="test.html">Take the Test</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profiles.html">Study Profiles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center text-white py-5">
+        <div class="container">
+            <p class="text-uppercase small fw-bold mb-2">Personalized learning</p>
+            <h1 class="display-5 fw-bold mb-3">Find the way your brain learns best</h1>
+            <p class="header-subtitle fs-5 col-lg-8 mx-auto mb-0">Answer 15 questions. Your responses are saved so StudyMatch can turn your habits into a practical study recommendation.</p>
+        </div>
     </header>
 
-    <main>
-        <!-- Main content area -->
+    <main class="container my-5 flex-grow-1">
+        <section id="quizPanel" class="quiz-shell mx-auto" aria-labelledby="questionTitle">
+            <div class="d-flex justify-content-between align-items-center mb-3"><span class="quiz-kicker" id="questionCounter">Question 1 of 15</span><span class="quiz-percent" id="progressPercent">7%</span></div>
+            <div class="progress mb-4" role="progressbar" aria-label="Test progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="13"><div class="progress-bar" id="progressBar" style="width: 13%"></div></div>
+            <form id="quizForm">
+                <fieldset><legend id="questionTitle" class="h2 fw-bold mb-4">Loading question...</legend><p class="question-help" id="questionHelp"></p><div id="answerOptions" class="answer-options"></div><div class="agreement-control" id="agreementControl"><div class="d-flex justify-content-between"><label for="agreementRange" class="fw-bold">How much do you agree?</label><output id="agreementValue" for="agreementRange">50%</output></div><input type="range" id="agreementRange" min="0" max="100" step="5" value="50"><div class="agreement-labels"><span>Not at all</span><span>Completely</span></div></div></fieldset>
+                <div class="d-flex justify-content-between align-items-center gap-3 mt-4"><button type="button" class="btn btn-outline-primary px-4" id="backButton">Back</button><button type="button" class="btn btn-primary px-4" id="nextButton">Next <i class="bi bi-arrow-right ms-2"></i></button></div>
+                <p class="text-danger small mt-3 mb-0" id="validationMessage" role="alert" hidden>Select an answer to continue.</p>
+            </form>
+        </section>
+
+        <section id="resultPanel" class="result-shell mx-auto" aria-labelledby="resultTitle" hidden>
+            <div class="result-icon"><i class="bi bi-stars"></i></div><p class="quiz-kicker mb-2">Your StudyMatch result</p><h2 class="display-6 fw-bold mb-3" id="resultTitle"></h2><p class="lead text-secondary mb-4" id="resultDescription"></p>
+            <div class="score-heading d-flex justify-content-between align-items-center mb-2"><span class="fw-bold">Match strength</span><span class="fw-bold" id="resultScore"></span></div><div class="score-track mb-4"><div id="scoreBar"></div></div><div class="result-breakdown" id="resultBreakdown"></div>
+            <div class="d-flex flex-wrap gap-3 mt-4"><button type="button" class="btn btn-primary" id="retakeButton"><i class="bi bi-arrow-counterclockwise me-2"></i>Retake test</button><a href="resources.html" class="btn btn-outline-primary">Explore resources <i class="bi bi-arrow-up-right ms-2"></i></a></div>
+            <p class="small text-muted mt-4 mb-0"><i class="bi bi-database me-1"></i>Your latest attempt is saved in this browser.</p>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 StudyMatch</p>
+    <footer class="bg-white border-top py-4 mt-auto"><div class="container text-center text-muted"><p class="mb-0">StudyMatch &copy; 2026 - Aligned with <strong>SDG 4: Quality Education</strong></p></div>
     </footer>
 
-    <!-- Link to external JavaScript file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
