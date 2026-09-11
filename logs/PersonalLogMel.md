@@ -1,0 +1,3 @@
+Personal Log 01 - 1st Prototype Delivery
+During this phase, I focused on building and refining the project's user interface, ensuring full responsiveness and visual consistency across all key pages. I updated the styling for our main sections including the Resource Center, Home, Login, and Sign-Up pages to establish high text contrast, resolve theme layout bugs, and maintain a polished color palette aligned with our design goals.
+My teammates, Marianna and Ana Paola, performed exceptionally well throughout this project. They successfully resolved complex Git merge conflicts during our workflow, completed their designated tasks efficiently, and consistently contributed valuable ideas to refine our product strategy.
