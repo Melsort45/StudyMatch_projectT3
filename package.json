@@ -1,0 +1,31 @@
+{
+  "name": "studymatch",
+  "version": "1.0.0",
+  "description": "Repository for the StudyMatch web application, to help students find their ideal study methods and provide recommendations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Melsort45/StudyMatch_projectT3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Melsort45/StudyMatch_projectT3/issues"
+  },
+  "homepage": "https://github.com/Melsort45/StudyMatch_projectT3#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
