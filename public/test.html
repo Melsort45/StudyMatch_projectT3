@@ -9,8 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
-<body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3">
+<body class="bg-light d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3">
     <div class="container"> <!-- CONTAINER HELPS MANTAIN EVERYTHING AT THE CENTER OF THE PAGE -->
       <a class="navbar-brand fw-bold text-primary fs-3" href="index.html">
         <i class="bi bi-journal-bookmark-fill me-2"></i>StudyMatch
@@ -40,39 +40,54 @@
     </div>
   </nav>
    
-   <header class="page-header text-center text-white">
-        <div class="container">
-            <p class="text-uppercase small fw-bold">Personalized learning</p>
-            <h1 class="display-5 fw-bold">Find the study method that connects with you</h1>
-            <p class="header-subtitle">Answer 15 questions. Your responses are saved so StudyMatch can turn your habits into personalized study recommendation.</p>
-        </div>
-    </header>
+  <header class="page-header text-center text-white">
+   <div class="container">
+     <p class="text-uppercase small fw-bold">Personalized learning</p>
+     <h1 class="display-5 fw-bold">Find the study method that connects with you</h1>
+     <p class="header-subtitle">Answer 15 questions. Your responses are saved so StudyMatch can turn your habits into personalized study recommendations.</p>
+   </div>
+  </header>
 
+  <main class="container test-main flex-grow-1">
+   <section class="quiz-shell mx-auto" id="quizPanel" aria-labelledby="questionTitle">
+     <div class="question-progress">
+       <span id="questionCounter">Question 1 of 15</span>
+       <span id="progressPercent">7%</span>
+     </div>
+     <div class="progress" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="7">
+       <div class="progress-bar" id="progressBar"></div>
+     </div>
+     <p class="question-help" id="questionHelp"></p>
+     <h2 class="question-title" id="questionTitle" tabindex="-1"></h2>
+     <div class="answer-options" id="answerOptions" role="group" aria-labelledby="questionTitle"></div>
+     <p class="validation-message" id="validationMessage" role="alert" hidden>Please choose an answer to continue.</p>
+     <div class="agreement-control" id="agreementControl" hidden>
+       <label for="agreementRange">How strongly does this match your habits?</label>
+       <input id="agreementRange" type="range" min="0" max="100" step="5" value="50">
+       <output class="agreement-value" id="agreementValue" for="agreementRange">50%</output>
+       <div class="agreement-labels"><span>Not at all</span><span>Completely</span></div>
+     </div>
+     <div class="quiz-navigation">
+       <button class="next-button back-button" id="backButton" type="button">Back</button>
+       <button class="next-button" id="nextButton" type="button">Next</button>
+     </div>
+   </section>
 
-    <main class="container test-main">
-        <section class="quiz-shell mx-auto">
-            <div class="question-progress">
-              <span id="questionCounter">Question 1 of 15</span>
-              <span id="progressPercent">7%</span>
-            </div>
-            <div class="progress" role="progressbar">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-            <fieldset class="question-content">
-              <legend>Which study method helps you remember information best?</legend>
-              <label><input type="radio" name="study-method" value="active-recall"> Active Recall</label>
-              <label><input type="radio" name="study-method" value="spaced-repetition"> Spaced Repetition</label>
-              <label><input type="radio" name="study-method" value="concept-mapping"> Concept Mapping</label>
-              <label><input type="radio" name="study-method" value="pomodoro"> Pomodoro Technique</label>
-            </fieldset>
-            <div class="agreement-control">
-              <label for="agreement">How strongly does this match your habits?</label>
-              <input id="agreement" type="range" min="0" max="100" step="5" value="50">
-              <div class="agreement-labels"><span>Not at all</span><span>Completely</span></div>
-            </div>
-            <button class="next-button" type="button">Next</button>
-        </section>
-    </main>
+   <section class="quiz-shell result-panel mx-auto" id="resultPanel" aria-labelledby="resultHeading" hidden>
+     <p class="text-uppercase small fw-bold text-primary">Your study match</p>
+     <h2 id="resultHeading">Your recommended study method</h2>
+     <h3 class="result-title" id="resultTitle"></h3>
+     <p id="resultDescription"></p>
+     <p class="result-score" id="resultScore"></p>
+     <div class="progress result-progress" role="progressbar" aria-label="Recommendation match score" aria-valuemin="0" aria-valuemax="100">
+       <div class="progress-bar" id="scoreBar"></div>
+     </div>
+     <h3 class="breakdown-title">Your results</h3>
+     <div class="result-breakdown" id="resultBreakdown"></div>
+     <p class="save-message" id="saveMessage" role="status"></p>
+     <button class="next-button" id="retakeButton" type="button">Take the quiz again</button>
+   </section>
+  </main>
    
  <!-- FOOTER -->
   <footer class="bg-white border-top py-4 mt-auto">
@@ -82,7 +97,6 @@
     </div>
   </footer>
 
-
+  <script src="js/test.js" defer></script>
 </body>
 </html>
-
