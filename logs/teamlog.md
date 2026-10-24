@@ -12,3 +12,9 @@ Marianna Jimenez start building the profiles page using a Bootstrap grid to show
 
 Day 3: Version Control, Merging & Peer Collaboration
 Encountered complex Git merge conflicts due to concurrent updates to global layout structures and shared CSS classes. A solution was found by saving in a document all the code and pulling everything into one computer, then manually merging the styles and code to have everything working and looking correctly.
+
+Team Development Log - Beta version
+
+During this second delivery, our team successfully took StudyMatch from a basic visual prototype to a fully functional Beta web application. We divided our tasks based on each member's strengths to cover both the frontend experience and the backend infrastructure.
+Marianna focused heavily on the visual consistency of the platform, refining the learning profiles page and making sure that key design elements like corporate gradient headers, sticky navbars, and active states matched across all pages. At the same time, Ana Paola worked on polishing the interactive test experience, testing out the question flows, and making sure the quiz interface aligned with the rest of the site's layout.
+On the technical side, Melisa built the Node.js and Express backend architecture from scratch to handle user authentication, routing, and database logic. She also integrated a secure proxy route to handle the YouTube video search data without exposing credentials on the client side. By combining our efforts, we connected the frontend and backend smoothly, ensuring that navigation, interactive elements, and account features all run seamlessly together.
