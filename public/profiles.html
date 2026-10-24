@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyMatch - Study profiles</title>
     
-    <!-- Link to external CSS stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Favicon link -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <!--nav bar-->
 <body class="bg-light d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3">       <!-- create nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3 shadow-sm">       <!-- create nav bar-->
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary fs-3" href="index.html"><i class="bi bi-journal-bookmark-fill me-2"></i>StudyMatch</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <a class="navbar-brand fw-bold text-primary fs-3 d-flex align-items-center" href="index.html">
+                <i class="bi bi-journal-bookmark-fill me-2"></i>StudyMatch
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav fs-5 align-items-center gap-2">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="test.html">Take the Test</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-semibold" href="profiles.html">Study Profiles</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-semibold text-primary" href="profiles.html">Study Profiles</a></li>
                     <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
                     <li class="nav-item ms-lg-2"><a class="btn btn-outline-primary rounded-pill px-4 fw-bold" href="login.html">Sign Up</a></li>
                 </ul>
@@ -31,10 +32,13 @@
         </div>
     </nav>
 
-    <header class="page-header text-center text-white py-5">
+    <header class="page-header text-center text-white py-5" style="background: linear-gradient(135deg, #131b3e 0%, #2f6fb3 100%) !important;">
         <div class="container">
-            <h1 class="display-5 fw-bold mb-3">Learning Profiles Overview</h1>
-            <p class="header-subtitle fs-5 col-lg-8 mx-auto mb-0">Read through each profile to understand strengths, key strategies, and common risks.</p>
+            <span class="badge bg-white text-primary px-3 py-2 rounded-pill fw-bold mb-3 shadow-sm">
+                <i class="bi bi-people-fill me-1"></i> Academic Profiles
+            </span>
+            <h1 class="display-5 fw-bold mb-3 text-white">Learning Profiles Overview</h1>
+            <p class="header-subtitle fs-5 col-lg-8 mx-auto mb-0 text-light opacity-90">Read through each profile to understand strengths, key strategies, and common risks.</p>
         </div>
         
     </header>
@@ -201,8 +205,11 @@
     </main>
 
 
-    <footer>
-        <p>&copy; 2026 StudyMatch</p>
+    <footer class="bg-white border-top py-4 mt-auto">
+      <div class="container text-center text-muted">
+        <p class="mb-1">StudyMatch &copy; 2026 — Aligned with <strong>SDG 4: Quality Education</strong></p>
+        <small>Developed by Melisa Arias, Marianna Jimenez, and Ana Paola Orellana</small>
+      </div>
     </footer>
 
     <!-- Link to external JavaScript file -->

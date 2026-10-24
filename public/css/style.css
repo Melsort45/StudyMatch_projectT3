@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
   --color-dark-navy: #131b3e;
   --color-ocean-blue: #2f6fb3;
@@ -7,6 +9,10 @@
   --bs-primary-rgb: 47, 111, 179;
   --bs-link-color: var(--color-ocean-blue);
   --bs-link-hover-color: var(--color-dark-navy);
+}
+
+body {
+  font-family: 'Poppins', sans-serif !important;
 }
 
 body.bg-light {
